@@ -1,5 +1,3 @@
-# Search Study
-
 # Study Search App
 
 This project is a web application for searching and viewing clinical studies related to Non-Small Cell Lung Cancer (NSCLC) and immunotherapy-related drugs. Users can enter search terms, view study details, and expand each study entry for more information.
