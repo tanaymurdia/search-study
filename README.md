@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Search Study
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Study Search App
 
-## Available Scripts
+This project is a web application for searching and viewing clinical studies related to Non-Small Cell Lung Cancer (NSCLC) and immunotherapy-related drugs. Users can enter search terms, view study details, and expand each study entry for more information.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Search Functionality**: Allows users to search for clinical studies using specific keywords.
+- **Expandable Study Entries**: Users can expand each study entry to view additional details.
+- **Study Details**: Each study entry includes the study title, a button to visit the study URL, and the start date.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Screenshots
+- Search View
+![Search Study Screenshot](https://github.com/user-attachments/assets/18e704d2-9a03-45ed-9ec0-533517727f41)
+- Expanded View
+![image](https://github.com/user-attachments/assets/ee41d76f-7dea-4f67-9cc3-29d619938346)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Python Service
 
-### `npm run build`
+To install packages listed in a `service\requirements.txt` file using `pip`, you can follow these simple steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Step 1: Ensure Python and Pip are Installed
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Before proceeding, make sure that Python and `pip` are installed on your system. You can verify this by running:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+python --version
+pip --version
+```
 
-### `npm run eject`
+If these commands return a version number, then Python and `pip` are installed. If not, you'll need to install them.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Step 2: Install Packages from `requirements.txt`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Use the following command to instruct `pip` to install all of the packages listed in `service\requirements.txt`:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+pip install -r service\requirements.txt
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Additional Tips:
 
-## Learn More
+- **Virtual Environment**: It is best practice to use a virtual environment to create an isolated environment for your project dependencies. This helps prevent dependency conflicts across projects. To create and activate a virtual environment, use the following commands:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  - **Create a Virtual Environment**: (assuming you want to create it in the current directory)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    python -m venv env
+    ```
 
-### Code Splitting
+  - **Activate the Virtual Environment**:
+    - On Windows:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+      ```bash
+      .\env\Scripts\activate
+      ```
 
-### Analyzing the Bundle Size
+    - On macOS and Linux:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+      ```bash
+      source env/bin/activate
+      ```
 
-### Making a Progressive Web App
+- **Checking Installations**: After installation, you can verify the installed packages using:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  ```bash
+  pip list
+  ```
 
-### Advanced Configuration
+These steps should guide you through installing the required packages for your project using a `requirements.txt` file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Starting the Service
 
-### Deployment
+To start the service, execute the following command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+python service/app.py
+```
 
-### `npm run build` fails to minify
+## React Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Available Scripts
+
+Within the project directory, you have access to the following commands:
+
+#### `npm start`
+
+This command runs the app in development mode.\
+Navigate to [http://localhost:3000](http://localhost:3000) to see it in your browser.
+
+#### `npm run build`
+
+This command builds the app for production, outputting to the `build` directory.\
+It properly bundles React in production mode and optimizes the build for enhanced performance.
+
+The build output is minified, and filenames include hashes for cache management.\
+Your app is now ready for deployment!
